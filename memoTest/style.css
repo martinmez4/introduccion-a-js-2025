@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #343333;
+
+	font-family: "Poppins", sans-serif;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 20%;
+	background-color: #252525;
+}
+
+button {
+	margin: 1.5rem auto;
+	width: 90%;
+	height: 2rem;
+	background-color: #278ea5;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+button:hover {
+	background-color: #1b6b7a;
+}
+
+#tablero {
+	width: 600px;
+	height: 500px;
+	background-color: #252525;
+	margin: 3rem auto auto 25rem;
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	padding: 1rem;
+}
+
+.contenedor {
+	border-radius: 5px;
+	border: 1px solid #626262;
+}
+
+.cuadro {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+[data-color="rojo"] {
+	background-color: #ff0000;
+}
+[data-color="verde"] {
+	background-color: #06ee06;
+}
+
+[data-color="azul"] {
+	background-color: #0000ff;
+}
+[data-color="amarillo"] {
+	background-color: #ffff00;
+}
+
+[data-color="violeta"] {
+	background-color: #cc00ff;
+}
+[data-color="blanco"] {
+	background-color: #ffffff;
+}
+
+#error,
+#numero-intentos,
+#numero-pares {
+	margin: 0.5rem;
+	margin-left: 1rem;
+	text-align: start;
+	font-size: 1.2rem;
+	color: white;
+}
+
+#error {
+	color: #ff6b6b;
+}
+#final {
+	color: white;
+	font-size: 1.5rem;
+	margin: 1rem;
+	display: none;
+}
